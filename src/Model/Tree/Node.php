@@ -30,8 +30,21 @@ trait Node
      * @var NodeInterface $parentNode the parent in the tree
      */
     private $parentNode;
+    
+    /**
+     * @var ArrayCollection $children the children in the tree
+     */
+    private $children;
 
+    /**
+     * @var string $materializedPath materialized path
+     */
     protected $materializedPath = '';
+
+    /**
+     * @var string $parentNodePath parent materialized path
+     */
+    protected $parentNodePath = '';
 
     /**
      * Returns path separator for entity's materialized path.

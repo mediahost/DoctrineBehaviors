@@ -315,4 +315,9 @@ class BlameableSubscriber extends AbstractSubscriber
     {
         return $this->getClassAnalyzer()->hasTrait($classMetadata->reflClass, $this->blameableTrait, $isRecursive);
     }
+	
+    public function setUserEntity($entity)
+    {
+        $this->userEntity = $entity;
+    }
 }

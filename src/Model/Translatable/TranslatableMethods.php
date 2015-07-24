@@ -133,7 +133,7 @@ trait TranslatableMethods
 
     public function getDefaultLocale()
     {
-        return 'en';
+        return isset($this->defaultLocale) ? $this->defaultLocale : 'en';
     }
 
     protected function proxyCurrentLocaleTranslation($method, array $arguments = [])

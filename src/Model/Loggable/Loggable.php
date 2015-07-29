@@ -31,7 +31,8 @@ trait Loggable
                 }
             }
 
-            if ($changeSet[0] != $changeSet[1]) {
+			$changeSet1Value = is_object($changeSet[1]) ? (string) $changeSet[1] : $changeSet[1];
+            if ($changeSet[0] != $changeSet1Value) {
                 $message[] = sprintf(
                     '%s #%d : property "%s" changed from "%s" to "%s"',
                     __CLASS__,

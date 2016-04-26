@@ -87,7 +87,7 @@ trait SluggableMethods
 
             // generate the slug itself
             $sluggableText = implode($usableValues, ' ');
-            $urlized = \Nette\Utils\Strings::webalize($sluggableText);
+            $urlized = \App\Helpers::webalizePlus($sluggableText);
 
             $this->slug = $urlized;
         }
